@@ -9,7 +9,7 @@ app.get('/',function(req,res){
                          language : null,
                          software : null,
                         };
-    parsedHeadObj.ipaddress = req.connection.remoteAddress;
+    parsedHeadObj.ipaddress = req.header('x-forwarded-for') || req.connection.remoteAddress;
     parsedHeadObj.language = req.headers['accept-language'].split(',')[0];
     parsedHeadObj.software = req.headers['user-agent'].split('(')[1].split(')')[0];
     res.end(JSON.stringify(parsedHeadObj));
