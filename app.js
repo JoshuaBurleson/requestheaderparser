@@ -5,9 +5,9 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 app.get('/',function(req,res){
-    var parsedHeadObj = {ipaddress : '',
-                         language : '',
-                         software : '',
+    var parsedHeadObj = {ipaddress : null,
+                         language : null,
+                         software : null,
                         };
     parsedHeadObj.ipaddress = req.connection.remoteAddress;
     parsedHeadObj.language = req.headers['accept-language'].split(',')[0];
