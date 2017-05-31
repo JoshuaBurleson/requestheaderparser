@@ -11,5 +11,7 @@
     "url": "https://www.github.com/JoshuaBurleson/requestheaderparser.git"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  }
 }
