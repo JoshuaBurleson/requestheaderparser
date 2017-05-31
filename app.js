@@ -14,7 +14,7 @@ app.get('/',function(req,res){
     parsedHeadObj.software = req.headers['user-agent'].split('(')[1].split(')')[0];
     res.writeHead(200, 'text/html');
     res.write('<title>Request Header Parser</title>');
-    res.end('<code>JSON.stringify(parsedHeadObj)</code>');
+    res.end('<code>'+JSON.stringify(parsedHeadObj)+'</code>');
 });
 
 app.listen(port);   
