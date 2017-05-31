@@ -14,5 +14,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.15.3"
   }
 }
